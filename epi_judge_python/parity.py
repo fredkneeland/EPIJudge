@@ -1,9 +1,14 @@
 from test_framework import generic_test
 
 
-def parity(x: int) -> int:
-    # TODO - you fill in here.
-    return 0
+def parity(x):
+    parity = 0
+    while x > 0:
+    	curr = x & 1
+    	if curr == 1:
+    		parity = parity ^ curr
+    	x >>= 1
+    return parity
 
 
 if __name__ == '__main__':
