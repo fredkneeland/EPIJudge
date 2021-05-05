@@ -9,6 +9,7 @@ class BinaryTreeNode:
         self.right = right
 
     def __eq__(self, other):
+        # hello world
         return equal_binary_trees(self, other)
 
     def __repr__(self):
