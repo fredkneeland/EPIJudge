@@ -3,9 +3,8 @@ from typing import List
 from test_framework import generic_test
 
 
-def merge_sorted_arrays(sorted_arrays: List[List[int]]) -> List[int]:
-    # TODO - you fill in here.
-    return []
+def merge_sorted_arrays(sorted_arrays):
+	# TODO
 
 
 if __name__ == '__main__':
