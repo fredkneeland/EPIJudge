@@ -8,6 +8,7 @@ from test_framework.test_utils import enable_executor_hook
 RED, WHITE, BLUE = range(3)
 
 
+# next -> do this in a single loop
 def dutch_flag_partition(pivot_index, A):
     start, end = 0, len(A)-1
 
@@ -33,7 +34,6 @@ def dutch_flag_partition(pivot_index, A):
             end -= 1
 
 
-    # print(A)
     return
 
 
