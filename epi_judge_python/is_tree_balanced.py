@@ -12,7 +12,7 @@ def is_balanced_binary_tree(node):
 	return bal
 	# return !bal2
 
-
+############## brute force solution #####################
 def is_balanced(node):
 	if node == None:
 		return True
@@ -31,6 +31,7 @@ def node_depth(node):
 	return max(right_height, left_height) + 1
 node_depth.counter = 0
 
+############### single time through tree solution #####################
 def node_depth2(node, height):
 	node_depth2.counter += 1
 	# test2 += 1
