@@ -9,9 +9,24 @@ NUM_PEGS = 3
 
 
 def compute_tower_hanoi(num_rings: int) -> List[List[int]]:
-    # TODO - you fill in here.
-    return []
+    return move_pegs(num_rings, 1, 0)
 
+
+def move_pegs(num, peg, start):
+    if num < 1:
+        return []
+    if num == 1:
+        return [[start,peg]]
+    opposite = 3 - peg - start
+
+    moves = move_pegs(num-1, opposite, start)
+    moves.append([start, peg])
+    newMoves = move_pegs(num-1, peg, opposite)
+
+    for move in newMoves:
+        moves.append(move)
+    return moves
+    
 
 @enable_executor_hook
 def compute_tower_hanoi_wrapper(executor, num_rings):
